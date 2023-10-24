@@ -1,1 +1,210 @@
 
+
+Desarrollo de programas en Seudocódigo
+
+
+
+Tobías Rojas Valencia
+Aprendiz
+
+
+
+
+
+Presentado a 
+Estella del Carmen Saleme
+
+
+
+
+
+
+
+
+
+Servicio Nacional de Aprendizaje – SENA
+Análisis y Desarrollo de Software
+Medellín - 2023
+Evidencia de producto: GA3-220501093-AA2-EV03 taller aplicando funciones y procedimientos en la solución de algoritmos. 
+En esta actividad deberá aplicar todos los conocimientos adquiridos a lo largo del componente formativo para dar solución a problemas utilizando la notación de pseudocódigo y diagramas de flujo, usando las herramientas establecidas por el instructor. Tenga en cuenta los diferentes tipos de estructuras de control básicas: secuenciales, condicionales y repetitivas.
+ Problemas propuestos: 
+1. Un corredor de maratón (distancia 42,195 Km) ha recorrido la carrera en 2 horas 25 minutos. Se desea un algoritmo que calcule el tiempo medio en minutos por kilómetro. (gRUPO1)
+ 2. Realizar la conversión de una temperatura dada en grados Centígrados a grados Fahrenheit (Fórmula: F = (9/5) C + 32). (gRUPO 2)
+ 3. Escribir el algoritmo que permite calcular la nota correspondiente al primer parcial de “análisis” para un estudiante cualquiera. Se debe considerar que hay dos talleres y un quiz, que en conjunto valen un 30% de la nota y el resto (70%) corresponde a la nota del examen parcial. (gRUPO 3)
+
+ 5. Elaborar un algoritmo que permita ingresar 20 números y muestre todos los números menores e iguales a 25.  (GRUPO 5)
+//5. Elaborar un algoritmo que permita ingresar 20 números 
+	//y muestre todos los números menores e iguales a 25. (GRUPO 5)
+	
+	cont=0
+	n=0
+	
+	Mientras cont < 20
+		cont=cont+1
+		imprimir "Digite número"
+		leer n
+		
+		si n <=25
+			Imprimir "Este número, " n " es menor que 25"
+			esperar 1 segundos
+		FinSi
+		
+	FinMientras
+	
+FinAlgoritmo
+
+6. Hacer un programa que sume 5 precios de camisas (en dólares) y que luego muestre el total de
+la venta en pesos. (gRUPO 6)
+Algoritmo sin_titulo
+
+//6. Hacer un programa que sume 5 precios de camisas (en dólares) 
+	//y que luego muestre el total de la venta en pesos. (gRUPO 6)
+	
+	cont=0
+	vc=0
+	vd=0
+	subt = 0
+	
+	imprimir "valor del dolar hoy"
+	leer vd
+	
+	Mientras cont <5
+		cont=cont + 1
+		
+		Imprimir "Valor de la camisa "
+		leer vc
+		
+		subt=subt+ vc
+		
+		Imprimir "Subtotal " subt
+		
+		esperar 1 Segundos
+		
+	FinMientras
+	
+	vp=subt * vd
+	
+	Imprimir "El valor de las camisas en pesos es: " vp
+	esperar Tecla
+FinAlgoritmo
+
+7. Hacer un programa que registre el consumo realizado por los clientes de un restaurante, si el
+consumo de cada cliente excede 50000 se hará un descuento del 20%. Se debe mostrar el pago de
+cada cliente y el total de todos los pagos.
+Algoritmo sin_titulo
+	//7. Hacer un programa que registre el consumo realizado por los clientes de un restaurante, 
+	//si el consumo de cada cliente excede 50000 se hará un descuento del 20%. 
+	//Se debe mostrar el pago de cada cliente y el total de todos los pagos.
+	
+	vc=1
+	vtp=0
+	pago=0	
+	
+	Mientras vc > 0 
+		limpiar pantalla
+		
+		Imprimir "Valor consumo <ENTER PARA SALIR>"
+		Leer vc
+		
+		si vc > 50000
+			des=vc*0.20
+			imprimir "Decuento " des
+			pago=vc-des
+			Imprimir  "Total a pagar: " pago
+			vtp=vtp+pago
+			
+			Esperar tecla
+		SiNo
+			si vc <> 0
+			Imprimir  "Total a pagar: " vc
+			vtp = vtp+vc
+			
+			Esperar tecla
+		finsi
+		
+	
+		FinSi
+		
+		pago=0
+		
+	
+	FinMientras
+	
+	imprimir "El total de ventas es: " vtp
+	
+
+FinAlgoritmo
+
+8. Diseñar un algoritmo que permita ingresar la hora, minutos y segundos, y que calcule la hora en el siguiente segundo ("0<= H <=23", "0<= M <=59" "0<= S<=59"). 
+Algoritmo sin_titulo
+	//8. Diseñar un algoritmo que permita ingresar la hora, minutos y segundos, 
+	//y que calcule la hora en el siguiente segundo ("0<= H <=23", "0<= M <=59" "0<= S<=59"). 
+	h=0
+	m=0
+	s=0
+
+	Escribir "Hora: "
+	leer h
+	Escribir "Minutos"
+	leer m
+	Escribir "Segundos"
+	leer s
+	
+	seg=(h*3600)+(m*60)+s+1
+	
+	hora=Trunc(seg/3600)
+	r=seg mod 3600
+	
+	min=trunc(r/60)
+	
+	seg=r mod 60
+	
+	Escribir "Hora: 	" hora
+	Escribir "Minutos 	" min
+	Escribir "Segundos	" seg
+	
+FinAlgoritmo
+9. Dado N, escribir el producto desde 1 hasta N. (gRUPO 4)
+Algoritmo sin_titulo
+	//9. Dado N, escribir el producto desde 1 hasta N
+	
+	cont=0
+	mul=1
+	
+	Imprimir "Digite número "
+	leer n
+	
+	mientras cont<n
+		cont=cont+1
+		
+		mul= mul * cont
+		
+		
+	FinMientras
+	
+	Imprimir "El producto total es : " mul
+	
+	
+FinAlgoritmo
+
+ 10. Realizar un algoritmo que muestre por pantalla la tabla de multiplicar decreciente de cualquier número, ingresado entre el 1 y el 10. 
+Algoritmo sin_titulo
+	
+	//10. Realizar un algoritmo que muestre por pantalla 
+	//la tabla de multiplicar decreciente de cualquier número, ingresado entre el 1 y el 10. 
+	
+	Hacer
+		Imprimir "Digite número"
+		leer n
+		
+	Hasta Que n<10
+	
+	i=10
+	mientras i<=10 y i>=1
+		
+		imprimir n " x " i " = " n*i
+		
+		i=i-1
+	FinMientras
+FinAlgoritmo
+
